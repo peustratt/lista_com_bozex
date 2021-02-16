@@ -25,5 +25,4 @@ def converter_hora_min(h):
 
     return h*60
 
-calcular_tempo(1,5,3,5)
 
