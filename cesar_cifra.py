@@ -13,11 +13,11 @@
 'HELLOWORLD'
 """
 
-alfabetox = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-alfabeto = []
+alfabeto_lower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alfabeto_upper = []
 
-for letra in alfabetox:
-    alfabeto.extend(letra.upper())
+for letra in alfabeto_lower:
+    alfabeto_upper.append(letra.upper())
 
 def cripto(n, string):
     message = []
@@ -26,11 +26,8 @@ def cripto(n, string):
     for letra in string:
         splitada.extend(letra)
     for letra in splitada:
-        for index, a in enumerate(alfabeto):
+        for index, a in enumerate(alfabeto_upper):
             if letra == a:
-                    message.extend(alfabeto[index - n])
+                    message.extend(alfabeto_upper[index - n])
 
     return ''.join(message)
-
-
-
